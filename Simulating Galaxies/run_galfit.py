@@ -1,8 +1,4 @@
-################################################
-# run_galfit.py
-#
-# Python script to run GALFIT on created parameter files
-#################################################
+# Python script to run GalFit on parameter files, modified from https://github.com/aritraghsh09/GalaxySim.
 
 from multiprocessing import Pool 
 import os

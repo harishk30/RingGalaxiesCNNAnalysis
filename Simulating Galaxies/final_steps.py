@@ -1,10 +1,5 @@
-#############################################
-#   extra_proc.py
-#
-#   Aritra Ghosh
-#
-#   This script is meant to do extra processing to all the simulated images -- Convolve with the suitable PSF--add the noise.
-############################################
+# Python script to convolve images with a PSF, add noise, and strech and export the images as JPEGS to train the model on. Modified from: https://github.com/aritraghsh09/GalaxySim.
+
 
 import numpy as np
 import tqdm
@@ -22,19 +17,25 @@ noiseFilePath = ''
 
 NUM_FILES_TOTAL = 55000
 NUM_THREADS = 15
-IMG_WIDTH = IMG_HEIGHT = 256 #No of pixels length/width -wise in each cutout
+IMG_WIDTH = IMG_HEIGHT = 256 
 
 def psf_and_noise(i):
 	try:
+    #Get image data as an array
 		img_data = fits.getdata(dataReadPath+"output_img_"+ str(i)+".fits",memmap=False)
+    #Get data from PSF
 		psf_data = fits.getdata(psfFilePath, memmap=False)
+    #Convolve image with PSF
 		convolved_data = convolve(img_data,psf_data,boundary='extend')
+    #Add randomized noise
 		final_data = convolved_data + np.random.normal(scale = 0.00005 ,size=(IMG_WIDTH,IMG_HEIGHT))
+    #Stretch the image, keeping 99.95% of initial pizels.
 		strech = SqrtStretch() + PercentileInterval(99.95)
 		stretched_image = strech(final_data)
 		stretched_image = (255 * stretched_image).astype(np.uint8)
 		stretched_image = stretched_image[::-1, :]
 		image = Image.fromarray(stretched_image, 'L')
+    #Write image
 		img_name = dataWritePath + "output " + str(i) + ".jpg"
 		image.save(img_name)
 	except:
@@ -46,9 +47,5 @@ def psf_and_noise(i):
 pl = Pool(NUM_THREADS)
 pl.map(psf_and_noise,range(0,NUM_FILES_TOTAL))
 
-#if you don't want this just replace this with the previous line
-#this next line does the same thing as the pool call above, but now with a progress bar
-#for _ in tqdm.tqdm(pl.imap_unordered(psf_and_noise,range(0,NUM_FILES_TOTAL)), total=NUM_FILES_TOTAL):
-#	pass
 
 
