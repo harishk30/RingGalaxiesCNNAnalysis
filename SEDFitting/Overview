@@ -1,0 +1,1 @@
+Pipeline to determine properties of galaxies via SEDFitting. All that is necessary is CSV with photometry in 10 bands.
