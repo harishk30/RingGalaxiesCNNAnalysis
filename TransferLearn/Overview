@@ -1,0 +1,1 @@
+Transfer learning the model trained on simulated data to real data. When output layer C & the last layers were retrained, that was found to be the best.
