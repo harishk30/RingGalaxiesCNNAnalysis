@@ -1,0 +1,1 @@
+Code to create templates to run GalFit on to simulate images of ring and non-ringed galaxies, and then convolve them with a PSF, apply noise, and strech them.
