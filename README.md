@@ -7,7 +7,7 @@ Downloading images from the PANSTARRS survey which are not in the range covered 
 
 ## SED Fitting
 
-A pipeline to use the BAGPIPES library to fit an SED to galaxies from photometric data in 11 bands, and estimate properties from this.
+A pipeline to use the BAGPIPES library to fit a SED to galaxies from photometric data in 11 bands, and estimate properties from this.
 
 ## Simulated Model
 
