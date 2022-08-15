@@ -21,3 +21,6 @@ Code to generate GalFit template files to generate ringed and non-ringed galaxie
 
 Inception ResNet V2 model trained on simulated data transfer learnt onto real data. Three models tested and compared, one with no transfer learning at all, one retraining only the output layers, and one retraining convolutional block C and the output layers (this was found to have the best metrics, and also has the code which was used to apply this model on unclassified data). 
 
+## GAN
+
+Three GAN architectures tested out for generating ring images and data augmentation.
