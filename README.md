@@ -1,4 +1,7 @@
 # Analysis of Ring Galaxies Detected Using Deep Learning with Real and Simulated Data
+
+![image](https://github.com/harishk30/RingGalaxiesCNNAnalysis/assets/68821641/29502c7c-3fc5-4e5f-8798-f27cbc6e7208)
+
 A Convolutional Neural Network to identify Ring Galaxies, code to simulate ringed galaxies via GalFit, code to download galaxy images from catalogs, and a SED Fitting pipeline for galaxies given their photometry in 11 bands. 
 
 ring_indices.csv is also included, a catalog of all ring galaxies discovered through this project.
