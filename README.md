@@ -31,3 +31,7 @@ Inception ResNet V2 model trained on simulated data transfer learnt onto real da
 ## GAN
 
 Three GAN architectures tested out for generating ring images and data augmentation.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
