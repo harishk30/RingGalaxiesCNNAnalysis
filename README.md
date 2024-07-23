@@ -4,7 +4,7 @@
   <img src="https://github.com/harishk30/RingGalaxiesCNNAnalysis/assets/68821641/29502c7c-3fc5-4e5f-8798-f27cbc6e7208" alt="description" width="600" height="450">
 </div>
 
-A Convolutional Neural Network to identify Ring Galaxies, code to simulate ringed galaxies via GalFit, code to download galaxy images from catalogs, and a SED Fitting pipeline for galaxies given their photometry in 11 bands. 
+A Convolutional Neural Network to identify Ring Galaxies, code to simulate ringed galaxies via GalFit, code to download galaxy images from catalogs, and a SED Fitting pipeline for galaxies given their photometry in 11 bands. Note that this SED Fitting pipeline did not end up being used. 
 
 ringcoords.csv is also included, a catalog of all ring galaxies discovered through this project.
 
