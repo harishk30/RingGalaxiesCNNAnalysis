@@ -32,6 +32,10 @@ Inception ResNet V2 model trained on simulated data transfer learnt onto real da
 
 Three GAN architectures tested out for generating ring images and data augmentation.
 
+## Citation
+
+Krishnakumar, H. and Kalmbach, J. Analysis of Ring Galaxies Detected Using Deep Learning with Real and Simulated Data, AJ, 2024, 168, 191. 
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
